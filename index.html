@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>N Queens</title>
+		<script src="nqueens.js"></script>
+	</head>
+	<body>
+	<script>
+		function getSolution(){
+			let node = document.getElementById("presentation");
+			let n = document.getElementById("n").value;
+			if(!isNaN(parseFloat(n))&&isFinite(n)){
+				nqueens(n, node);
+			} else {
+				alert("Invalid number for N([3,10])");
+			}
+		}
+	</script>
+		<center>
+			<h1>N Queens problem solver?</h1>
+			<br>
+			<p style="color:white;">Just another piece of shit made by this piece of stupid shit</p>
+			<br>
+			<div class="inputSection">
+				N=
+				<input type="text" maxlength="2" autocomplete="off" id="n"/>
+				<br>
+				<button type="button" onclick="getSolution()">Present Solution</button>
+			</div>
+			<br>
+			<div id="presentation">
+				
+			</div>
+		</center>
+	</body>
+</html>
