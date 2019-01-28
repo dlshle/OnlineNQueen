@@ -8,7 +8,7 @@
 		function getSolution(){
 			let node = document.getElementById("presentation");
 			let n = document.getElementById("n").value;
-			if(!isNaN(parseFloat(n))&&isFinite(n)&&n>4&&n<50){
+			if(!isNaN(parseFloat(n))&&isFinite(n)&&n>3&&n<51){
 				nqueens(n, node);
 			} else {
 				alert("Invalid number for N([4,50])");
