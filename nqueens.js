@@ -1,7 +1,7 @@
 let solutionCounter;
 
 function nqueens(n, node){
-	if(n<3||n>10)
+	if(n<4||n>50)
 		return false;	
 	//clear the node
 	node.innerHTML = "";

@@ -8,10 +8,10 @@
 		function getSolution(){
 			let node = document.getElementById("presentation");
 			let n = document.getElementById("n").value;
-			if(!isNaN(parseFloat(n))&&isFinite(n)){
+			if(!isNaN(parseFloat(n))&&isFinite(n)&&n>4&&n<50){
 				nqueens(n, node);
 			} else {
-				alert("Invalid number for N([3,10])");
+				alert("Invalid number for N([4,50])");
 			}
 		}
 	</script>
