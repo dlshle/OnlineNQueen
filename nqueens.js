@@ -77,24 +77,15 @@ function printBoard(board, node){
 }
 
 function validate(board, p){
-	//up-down
 	for(let i=0;i<board.length;i++){
 		if(i==p)
 			continue;
+		let diff = Math.abs(i-p);
 		if(board[i]==board[p])
 			return false;
-	}
-
-	//diagnoal
-	for(let i=0;i<p;i++){
-		if(board[i]==(board[p]+(p-i))||board[i]==(board[p]-(p-i)))
+		if(board[i] == board[p]+diff||board[i]==board[p]-diff)
 			return false;
 	}
-	for(let i=p+1;i<board.length;i++){
-		if(board[i]==(board[p]+(i-p))||board[i]==(board[p]-(i-p)))
-			return false;
-	}
-
 	return true;
 }
 
@@ -143,7 +134,7 @@ function generateRandNumber(low, high){
 function generateRandList(len){
 	let list = [];
 	for(let i=0;i<len;i++)
-		list.push(generateRandNumber(0, len-1);
+		list.push(generateRandNumber(0, len-1));
 	return list;
 }
 
